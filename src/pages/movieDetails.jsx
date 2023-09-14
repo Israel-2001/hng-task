@@ -37,7 +37,7 @@ function MovieDetails() {
   return (
     <>
         <MovieSearch />
-      <div className='bg-gray-200 mt-[-20px] pt-3'>
+      <div className='bg-gray-900 mt-[-20px] mb-40 pt-3'>
         {loading ? (
           <Spinner />
         ) : (
