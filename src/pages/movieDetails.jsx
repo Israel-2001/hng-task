@@ -41,10 +41,10 @@ function MovieDetails() {
         {loading ? (
           <Spinner />
         ) : (
-          <div  data-testid="movie-card" className="flex m-auto bg-gray-900 
+          <div  data-testid="movie-card" className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row m-auto bg-gray-900 
           text-white my-[-16px] font-medium justify-center items-center"
           >
-            <div className='w-[400%]'>
+            <div className='w-[100%] '>
               <img 
                 data-testid="movie-poster"
                 src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`} 
