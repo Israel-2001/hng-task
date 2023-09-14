@@ -15,7 +15,7 @@ export default function footer() {
           <FaTwitter className="text-2xl" />
           <FaWhatsapp className="text-2xl" />
         </div>
-        <div className='flex flex-row space-x-6 cursor-pointer'>
+        <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row space-x-6 cursor-pointer'>
           <p>Conditions of Use</p>
           <p>Privacy & Policy</p>
           <p>Press Room</p>
