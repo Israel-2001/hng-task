@@ -15,7 +15,7 @@ function Index() {
     const fetchTopMovies = async () => {
       try {
         const response = await axios.get(
-          'https://api.themoviedb.org/3/movie/popular',
+          'https://api.themoviedb.org/3/movie/top_rated',
           {
             params: {
               api_key: '8b7b40a740e510c4f2ff2d66bdb6fc18',
@@ -39,7 +39,7 @@ function Index() {
       <MovieSearch />
       <div className="bg-gray-200 mt-[-20px] pt-3">
         <div className='max-w-6xl mx-auto bg-gray-200'>
-          <h1 className='font-bold text-4xl px-6'>Top 10 Movies</h1>
+          <h1 className='font-bold text-4xl px-6'>Top Rated</h1>
           {loading ? (
             <Spinner />
           ) : (
@@ -47,7 +47,7 @@ function Index() {
               <ul className='sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center'>
                 {topMovies.slice(0, 10).map((movie, id) => (
                   <li 
-                    className="mx-auto px-2"  
+                    className="mx-auto mb-6 px-2"  
                     key={id}
                   >
                     <div
