@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaAlignJustify } from 'react-icons/fa6';
+import { FaAlignJustify  } from 'react-icons/fa6';
+import { PiTelevisionThin } from 'react-icons/pi'
 
 function MovieSearch() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,29 +38,32 @@ function MovieSearch() {
     fetchMovies();
   }, [searchQuery]);
 
+
   return (
     <div className="relative bg-white shadow-md dark:bg-gray-800 ">
-      <div className="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
-        <div className="flex py-4 flex-row items-center justify-center space-x-2 md:flex-row md:space-y-0 md:space-x-4">
-          <div>
-            <h1 className="cursor-pointer text-white my-2 font-bold text-2xl sm:text-2xl">ROBOX</h1>
+      <div className="max-w-screen-xl px-4 mx-auto lg:px-12 w-full pb-4">
+        <div className="flex py-4 flex-row items-center justify-between space-x-2 md:flex-row md:space-y-0 md:space-x-4">
+          <div className='flex justify-center items-center space-x-2'>
+            <PiTelevisionThin className='p-3 text-6xl bg-red-600 text-white rounded-full' />
+            <h1 className="cursor-pointer text-white my-2 font-bold text-2xl sm:text-2xl">MOVIEBOX</h1>
           </div>
-          <div className="relative w-full">
-            <input
-              type="text"
-              placeholder="Search for a movie"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="block w-full p-2 pl-3 text-sm text-gray-50 
-                border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 
-                focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 
-                dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 
-                dark:focus:border-primary-500"
-            />
+          <div className="flex justify-center items-center space-x-2"> 
+            <p className='text-2xl text-white'>Sign in</p>
+            <FaAlignJustify className='p-3 text-6xl bg-red-600 text-white rounded-full cursor-pointer' />
           </div>
-          <div className=" text-white text-3xl"> 
-            <FaAlignJustify className='cursor-pointer' />
-          </div>
+        </div>
+        <div className="relative w-full">
+          <input
+            type="text"
+            placeholder="What do you want to search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="block w-full p-2 pl-3 text-sm text-gray-50 
+              border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 
+              focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 
+              dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 
+              dark:focus:border-primary-500"
+          />
         </div>
       </div>
       {loading ? (
