@@ -45,10 +45,10 @@ function MovieSearch() {
         <div className="flex py-4 flex-row items-center justify-between space-x-2 md:flex-row md:space-y-0 md:space-x-4">
           <div className='flex justify-center items-center space-x-2'>
             <PiTelevisionThin className='p-3 text-6xl bg-red-600 text-white rounded-full' />
-            <h1 className="cursor-pointer text-white my-2 font-bold text-2xl sm:text-2xl">MOVIEBOX</h1>
+            <h1 className="cursor-pointer text-white my-2 font-bold text-lg sm:text-2xl">MOVIEBOX</h1>
           </div>
           <div className="flex justify-center items-center space-x-2"> 
-            <p className='text-2xl text-white'>Sign in</p>
+            <p className='text-lg text-white'>Sign in</p>
             <FaAlignJustify className='p-3 text-6xl bg-red-600 text-white rounded-full cursor-pointer' />
           </div>
         </div>
