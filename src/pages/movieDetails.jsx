@@ -4,7 +4,6 @@ import axios from 'axios';
 import Spinner from '../components/Spinner';
 import Footer from '../components/footer';
 import MovieSearch from './MovieSearch';
-import LikedButton from './likedButton';
 
 function MovieDetails() {
   const { id } = useParams();
@@ -36,7 +35,7 @@ function MovieDetails() {
 
   return (
     <>
-        <MovieSearch />
+        
       <div className='bg-gray-900 mt-[-20px] mb-40 pt-3'>
         {loading ? (
           <Spinner />
@@ -52,7 +51,7 @@ function MovieDetails() {
                 className="rounded w-full h-[100%]" 
               />
             </div>
-            <div className='space-y-2 ml-4'>
+            <div className='ml-4 space-y-2'>
               <h1 data-testid="movie-title" className='pt-2 text-3xl'>{movieDetails.title}</h1>
               <p data-testid="movie-release-date" className='pt-2 text-lg'>
                 {movieDetails.release_date}
