@@ -10,8 +10,8 @@ function LikedButton() {
 
   return (
     <>
-      <div className='p-2 bg-gray-300 relative top-2 rounded-full w-8'>
-        <FaHeart onClick={toggleLike} className={`text-white cursor-pointer ${isFavourite ? 'text-red-500' : ''}`} 
+      <div className='bg-gray-50 px-2 py-2 top-2 relative rounded-full'>
+        <FaHeart onClick={toggleLike} className={` text-blue-300 cursor-pointer ${isFavourite ? 'text-red-700' : ''}`} 
         />
       </div>
     </>
